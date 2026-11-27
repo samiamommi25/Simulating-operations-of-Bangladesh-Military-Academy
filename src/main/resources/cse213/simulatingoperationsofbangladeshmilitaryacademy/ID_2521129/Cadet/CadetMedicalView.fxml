@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.Cadet.Controller.CadetMedicalController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" text="Medical Status &amp; Sick Report">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="287.0" layoutY="66.0" text="Complaint:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="144.0" layoutY="147.0" text="Medical Fitness, Allergies &amp; Exam History:" />
+      <TextArea fx:id="complaintTA" layoutX="376.0" layoutY="41.0" prefHeight="70.0" prefWidth="200.0" />
+      <TextArea fx:id="historyTA" layoutX="376.0" layoutY="133.0" prefHeight="171.0" prefWidth="200.0" />
+      <Button layoutX="406.0" layoutY="320.0" mnemonicParsing="false" onAction="#submitSickReportButtonOnAction" text="Submit Sick Report" />
+      <Button layoutX="403.0" layoutY="360.0" mnemonicParsing="false" onAction="#viewMedicalStatusButtonOnAction" text="View Medical Status" />
+   </children>
+</AnchorPane>

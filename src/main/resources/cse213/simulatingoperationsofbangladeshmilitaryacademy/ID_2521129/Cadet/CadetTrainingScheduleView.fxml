@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="606.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.Cadet.Controller.CadetTrainingScheduleController">
+   <children>
+      <Label layoutX="11.0" layoutY="10.0" prefHeight="30.0" prefWidth="386.0" text="Training  Schedule">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="107.0" layoutY="265.0" prefHeight="26.0" prefWidth="366.0" text="Schedule Table:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="156.0" layoutY="111.0" text="Date:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="78.0" layoutY="195.0" text="Activity Details:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="ScheduleTV" layoutX="14.0" layoutY="314.0" prefHeight="200.0" prefWidth="570.0">
+        <columns>
+          <TableColumn fx:id="InstructorTC" minWidth="1.60009765625" prefWidth="112.0" text="Instructor" />
+            <TableColumn fx:id="TimeTC" minWidth="1.60009765625" prefWidth="156.79998779296875" text="Time" />
+            <TableColumn fx:id="activityTypeTC" minWidth="1.60009765625" prefWidth="139.20001220703125" text="Activity Type" />
+            <TableColumn fx:id="locationTC" minWidth="1.60009765625" prefWidth="163.199951171875" text="Location" />
+        </columns>
+      </TableView>
+      <Button layoutX="149.0" layoutY="525.0" mnemonicParsing="false" onAction="#loadTableButtonOnAction" prefHeight="26.0" prefWidth="282.0" text="Load Table" />
+      <DatePicker fx:id="datedp" layoutX="212.0" layoutY="108.0" />
+      <TextArea fx:id="activityDetailsTA" layoutX="179.0" layoutY="165.0" prefHeight="79.0" prefWidth="298.0" />
+   </children>
+</AnchorPane>
