@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="780" prefWidth="1100" style="-fx-background-color: #f4f7f5;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ataulislam.Physical.MonitorCadetTrainingAttendanceController">
+
+    <!-- MAIN CONTENT -->
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;                            -fx-background: #f4f7f5;">
+
+            <VBox spacing="20" style="-fx-padding: 25;">
+
+                <!-- PAGE TITLE -->
+                <VBox spacing="6">
+                    <Label style="-fx-font-size: 25px;                                   -fx-font-weight: bold;                                   -fx-text-fill: #123d2b;" text="Training Attendance" />
+
+                    <Label style="-fx-font-size: 13px;                                   -fx-text-fill: #65756b;" text="Select training information and manage cadet attendance." />
+                </VBox>
+
+                <!-- TRAINING INFORMATION -->
+                <VBox spacing="15" style="-fx-background-color: white;                              -fx-padding: 22;                              -fx-background-radius: 10;                              -fx-border-color: #dce7df;                              -fx-border-radius: 10;">
+
+                    <Label style="-fx-font-size: 16px;                                   -fx-font-weight: bold;                                   -fx-text-fill: #123d2b;" text="TRAINING INFORMATION" />
+
+                    <GridPane hgap="20" vgap="15">
+
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="50" />
+                            <ColumnConstraints percentWidth="50" />
+                        </columnConstraints>
+
+                        <Label style="-fx-font-weight: bold;" text="Training Date" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+                        <DatePicker fx:id="trainingDatePicker" maxWidth="Infinity" promptText="Select Training Date" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                        <Label style="-fx-font-weight: bold;" text="Company" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <ComboBox fx:id="companyComboBox" maxWidth="Infinity" onAction="#handleCompanyChange" promptText="Select Company" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Label style="-fx-font-weight: bold;" text="Platoon" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+                        <ComboBox fx:id="platoonComboBox" maxWidth="Infinity" promptText="Select Platoon" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+                        <Label style="-fx-font-weight: bold;" text="Training Type" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                        <ComboBox fx:id="trainingTypeComboBox" maxWidth="Infinity" promptText="Select Training Type" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+
+                    </GridPane>
+
+                    <Button maxWidth="Infinity" onAction="#handleLoadCadets" style="-fx-background-color: #167346;                                    -fx-text-fill: white;                                    -fx-font-weight: bold;                                    -fx-font-size: 14px;                                    -fx-padding: 11;                                    -fx-background-radius: 6;" text="Load Cadet List" />
+                </VBox>
+
+                <!-- ATTENDANCE SUMMARY -->
+                <GridPane hgap="15">
+
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="33.33" />
+                        <ColumnConstraints percentWidth="33.33" />
+                        <ColumnConstraints percentWidth="33.34" />
+                    </columnConstraints>
+
+                    <VBox spacing="8" style="-fx-background-color: white;                                  -fx-padding: 18;                                  -fx-background-radius: 9;                                  -fx-border-color: #dce7df;                                  -fx-border-radius: 9;" GridPane.columnIndex="0">
+
+                        <Label style="-fx-text-fill: #65756b;                                       -fx-font-weight: bold;" text="TOTAL CADETS" />
+
+                        <Label fx:id="totalCadetsLabel" style="-fx-font-size: 27px;                                       -fx-font-weight: bold;                                       -fx-text-fill: #123d2b;" text="0" />
+                    </VBox>
+
+                    <VBox spacing="8" style="-fx-background-color: white;                                  -fx-padding: 18;                                  -fx-background-radius: 9;                                  -fx-border-color: #dce7df;                                  -fx-border-radius: 9;" GridPane.columnIndex="1">
+
+                        <Label style="-fx-text-fill: #65756b;                                       -fx-font-weight: bold;" text="PRESENT" />
+
+                        <Label fx:id="presentLabel" style="-fx-font-size: 27px;                                       -fx-font-weight: bold;                                       -fx-text-fill: #16834b;" text="0" />
+                    </VBox>
+
+                    <VBox spacing="8" style="-fx-background-color: white;                                  -fx-padding: 18;                                  -fx-background-radius: 9;                                  -fx-border-color: #dce7df;                                  -fx-border-radius: 9;" GridPane.columnIndex="2">
+
+                        <Label style="-fx-text-fill: #65756b;                                       -fx-font-weight: bold;" text="ABSENT" />
+
+                        <Label fx:id="absentLabel" style="-fx-font-size: 27px;                                       -fx-font-weight: bold;                                       -fx-text-fill: #d64545;" text="0" />
+                    </VBox>
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
+
+                </GridPane>
+
+                <!-- CADET ATTENDANCE TABLE -->
+                <VBox spacing="15" style="-fx-background-color: white;                              -fx-padding: 20;                              -fx-background-radius: 10;                              -fx-border-color: #dce7df;                              -fx-border-radius: 10;">
+
+                    <Label style="-fx-font-size: 16px;                                   -fx-font-weight: bold;                                   -fx-text-fill: #123d2b;" text="CADET ATTENDANCE RECORD" />
+
+                    <TableView fx:id="attendanceTable" editable="true" prefHeight="280" VBox.vgrow="ALWAYS">
+
+                        <columns>
+
+                            <TableColumn fx:id="serialColumn" prefWidth="55" text="SL" />
+
+                            <TableColumn fx:id="cadetIdColumn" prefWidth="130" text="Cadet ID" />
+
+                            <TableColumn fx:id="cadetNameColumn" prefWidth="230" text="Cadet Name" />
+
+                            <TableColumn fx:id="companyColumn" prefWidth="140" text="Company" />
+
+                            <TableColumn fx:id="platoonColumn" prefWidth="120" text="Platoon" />
+
+                            <TableColumn fx:id="statusColumn" prefWidth="180" text="Attendance Status" />
+
+                        </columns>
+
+                        <placeholder>
+                            <Label text="Please select training information and load cadets." />
+                        </placeholder>
+
+                    </TableView>
+
+                    <Label style="-fx-text-fill: #65756b;                                   -fx-font-size: 12px;" text="Select Present or Absent from the Attendance Status column." />
+
+                    <HBox alignment="CENTER_RIGHT" spacing="12">
+
+                        <Button onAction="#handleMarkAllPresent" style="-fx-background-color: #16834b;                                        -fx-text-fill: white;                                        -fx-font-weight: bold;                                        -fx-padding: 10 16;" text="Mark All Present" />
+
+                        <Button onAction="#handleMarkAllAbsent" style="-fx-background-color: #d64545;                                        -fx-text-fill: white;                                        -fx-font-weight: bold;                                        -fx-padding: 10 16;" text="Mark All Absent" />
+
+                    </HBox>
+
+                </VBox>
+
+                <!-- ACTION BUTTONS -->
+                <HBox alignment="CENTER_RIGHT" spacing="15">
+
+                    <Button onAction="#handleClear" prefWidth="110" style="-fx-background-color: #737d78;                                    -fx-text-fill: white;                                    -fx-font-weight: bold;                                    -fx-padding: 12;" text="Clear" />
+
+                    <Button onAction="#handleSaveAttendance" prefWidth="190" style="-fx-background-color: #123d2b;                                    -fx-text-fill: white;                                    -fx-font-weight: bold;                                    -fx-padding: 12;" text="Save Attendance" />
+
+                </HBox>
+
+                <Label fx:id="messageLabel" style="-fx-text-fill: #167346;                               -fx-font-size: 13px;" text="Ready to manage cadet attendance." />
+
+            </VBox>
+
+        </ScrollPane>
+    </center>
+
+    <!-- FOOTER -->
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-background-color: #123d2b;                      -fx-padding: 12;">
+
+            <Label style="-fx-text-fill: white;                           -fx-font-size: 11px;" text="Bangladesh Military Academy | Cadet Training Management System" />
+
+        </HBox>
+    </bottom>
+
+</BorderPane>

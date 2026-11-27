@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: #edf2ee;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ataulislam.Cadet.GenerateOverallCadetPerformanceReportController">
+
+    <BorderPane AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+
+        <!-- CENTER CONTENT -->
+        <center>
+            <VBox alignment="TOP_CENTER" spacing="18" style="-fx-padding: 30;">
+
+                <Label style="-fx-font-size: 21px;                               -fx-font-weight: bold;                               -fx-text-fill: #123c2a;" text="GENERATE OVERALL CADET PERFORMANCE REPORT" />
+
+                <Label style="-fx-font-size: 13px;                               -fx-text-fill: #555555;" text="Select report category, company, platoon and reporting period." />
+
+                <!-- REPORT FORM -->
+                <VBox maxWidth="750" spacing="15" style="-fx-background-color: white;                              -fx-padding: 25;                              -fx-background-radius: 10;                              -fx-border-color: #cbd8ce;                              -fx-border-radius: 10;">
+
+                    <Label style="-fx-font-size: 17px;                                   -fx-font-weight: bold;                                   -fx-text-fill: #123c2a;" text="Report Information" />
+
+                    <Separator />
+
+                    <Label text="Report Category" />
+
+                    <ComboBox fx:id="categoryComboBox" maxWidth="Infinity" promptText="Select Report Category" />
+
+                    <Label text="Select Company" />
+
+                    <ComboBox fx:id="companyComboBox" maxWidth="Infinity" promptText="Select Company" />
+
+                    <Label text="Select Platoon" />
+
+                    <ComboBox fx:id="platoonComboBox" maxWidth="Infinity" promptText="Select Platoon" />
+
+                    <Label text="Reporting Period" />
+
+                    <HBox spacing="15">
+
+                        <VBox spacing="7" HBox.hgrow="ALWAYS">
+                            <Label text="Start Date" />
+                            <DatePicker fx:id="startDatePicker" maxWidth="Infinity" promptText="Start Date" />
+                        </VBox>
+
+                        <VBox spacing="7" HBox.hgrow="ALWAYS">
+                            <Label text="End Date" />
+                            <DatePicker fx:id="endDatePicker" maxWidth="Infinity" promptText="End Date" />
+                        </VBox>
+
+                    </HBox>
+
+                    <Separator />
+
+                    <!-- BUTTONS -->
+                    <HBox alignment="CENTER" spacing="15">
+
+                        <Button onAction="#handleGenerateReport" style="-fx-background-color: #123c2a;                                        -fx-text-fill: white;                                        -fx-font-weight: bold;                                        -fx-padding: 11 25;                                        -fx-background-radius: 5;" text="Generate Report" />
+
+                        <Button onAction="#handleClear" style="-fx-background-color: #777777;                                        -fx-text-fill: white;                                        -fx-font-weight: bold;                                        -fx-padding: 11 30;                                        -fx-background-radius: 5;" text="Clear" />
+
+                    </HBox>
+
+                    <Label fx:id="statusLabel" style="-fx-text-fill: #c0392b;                                   -fx-font-size: 13px;" text="" wrapText="true" />
+
+                </VBox>
+
+                <!-- REPORT OUTPUT -->
+                <VBox maxWidth="750" spacing="10" style="-fx-background-color: white;                              -fx-padding: 20;                              -fx-background-radius: 10;                              -fx-border-color: #cbd8ce;                              -fx-border-radius: 10;">
+
+                    <Label style="-fx-font-size: 17px;                                   -fx-font-weight: bold;                                   -fx-text-fill: #123c2a;" text="Generated Report Preview" />
+
+                    <TextArea fx:id="reportTextArea" editable="false" prefHeight="180" promptText="Generated cadet performance report will appear here..." wrapText="true" />
+
+                </VBox>
+
+            </VBox>
+        </center>
+
+        <!-- FOOTER -->
+        <bottom>
+            <HBox alignment="CENTER" prefHeight="40" style="-fx-background-color: #123c2a;">
+
+                <Label style="-fx-text-fill: white;                               -fx-font-size: 11px;" text="Bangladesh Military Academy | Cadet Management System" />
+
+            </HBox>
+        </bottom>
+
+    </BorderPane>
+
+</AnchorPane>

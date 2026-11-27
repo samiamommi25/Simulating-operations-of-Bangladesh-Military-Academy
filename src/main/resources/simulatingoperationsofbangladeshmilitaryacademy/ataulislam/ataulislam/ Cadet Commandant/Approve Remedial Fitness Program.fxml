@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1100.0" style="-fx-background-color: #edf2ee;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ataulislam.Cadet.ApproveRemedialFitnessProgramController">
+
+    <BorderPane AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+
+        <!-- CENTER CONTENT -->
+        <center>
+            <ScrollPane fitToWidth="true" style="-fx-background: #edf2ee;                                -fx-background-color: #edf2ee;">
+
+                <content>
+                    <VBox spacing="15" style="-fx-padding: 22;">
+
+                        <Label style="-fx-font-size: 21px;                                       -fx-font-weight: bold;                                       -fx-text-fill: #123c2a;" text="APPROVE REMEDIAL FITNESS PROGRAM" />
+
+                        <Label style="-fx-font-size: 13px;                                       -fx-text-fill: #555555;" text="Review weak cadets, exercise routines and proposed training schedules." />
+
+                        <!-- PROPOSAL SELECTION -->
+                        <VBox spacing="12" style="-fx-background-color: white;                                      -fx-padding: 18;                                      -fx-background-radius: 10;                                      -fx-border-color: #cbd8ce;                                      -fx-border-radius: 10;">
+
+                            <Label style="-fx-font-size: 17px;                                           -fx-font-weight: bold;                                           -fx-text-fill: #123c2a;" text="Remedial Proposal Selection" />
+
+                            <Separator />
+
+                            <HBox spacing="18">
+
+                                <VBox spacing="7" HBox.hgrow="ALWAYS">
+
+                                    <Label text="Select Submitted Proposal" />
+
+                                    <ComboBox fx:id="proposalComboBox" maxWidth="Infinity" promptText="Select Remedial Proposal" />
+
+                                </VBox>
+
+                                <VBox spacing="7" HBox.hgrow="ALWAYS">
+
+                                    <Label text="Submitted By" />
+
+                                    <TextField fx:id="submittedByField" editable="false" promptText="PTI Name" />
+
+                                </VBox>
+
+                                <VBox spacing="7" HBox.hgrow="ALWAYS">
+
+                                    <Label text="Proposal Date" />
+
+                                    <TextField fx:id="proposalDateField" editable="false" promptText="Proposal Date" />
+
+                                </VBox>
+
+                            </HBox>
+
+                            <Label fx:id="proposalDescriptionLabel" style="-fx-text-fill: #555555;" text="Proposal Description: Not Selected" wrapText="true" />
+
+                            <Button onAction="#handleReviewProposal" style="-fx-background-color: #123c2a;                                            -fx-text-fill: white;                                            -fx-font-weight: bold;                                            -fx-padding: 10 25;                                            -fx-background-radius: 5;" text="Review Proposal" />
+
+                        </VBox>
+
+                        <!-- WEAK CADET RECORDS -->
+                        <VBox spacing="10" style="-fx-background-color: white;                                      -fx-padding: 18;                                      -fx-background-radius: 10;                                      -fx-border-color: #cbd8ce;                                      -fx-border-radius: 10;">
+
+                            <Label style="-fx-font-size: 17px;                                           -fx-font-weight: bold;                                           -fx-text-fill: #123c2a;" text="Weak Cadets Fitness Records" />
+
+                            <TableView fx:id="cadetTable" prefHeight="145">
+
+                                <columns>
+
+                                    <TableColumn fx:id="cadetIdColumn" prefWidth="120" text="Cadet ID" />
+
+                                    <TableColumn fx:id="cadetNameColumn" prefWidth="180" text="Cadet Name" />
+
+                                    <TableColumn fx:id="fitnessScoreColumn" prefWidth="140" text="Fitness Score" />
+
+                                    <TableColumn fx:id="fitnessIssueColumn" prefWidth="200" text="Fitness Issue" />
+
+                                    <TableColumn fx:id="fitnessStatusColumn" prefWidth="130" text="Status" />
+
+                                </columns>
+
+                            </TableView>
+
+                        </VBox>
+
+                        <!-- EXERCISE ROUTINE -->
+                        <VBox spacing="10" style="-fx-background-color: white;                                      -fx-padding: 18;                                      -fx-background-radius: 10;                                      -fx-border-color: #cbd8ce;                                      -fx-border-radius: 10;">
+
+                            <Label style="-fx-font-size: 17px;                                           -fx-font-weight: bold;                                           -fx-text-fill: #123c2a;" text="Proposed Exercise Routine" />
+
+                            <TableView fx:id="exerciseTable" prefHeight="145">
+
+                                <columns>
+
+                                    <TableColumn fx:id="exerciseNameColumn" prefWidth="220" text="Exercise" />
+
+                                    <TableColumn fx:id="exerciseDurationColumn" prefWidth="150" text="Duration" />
+
+                                    <TableColumn fx:id="exerciseFrequencyColumn" prefWidth="170" text="Frequency / Week" />
+
+                                    <TableColumn fx:id="exerciseWorkloadColumn" prefWidth="150" text="Weekly Hours" />
+
+                                </columns>
+
+                            </TableView>
+
+                            <Label fx:id="workloadStatusLabel" style="-fx-font-size: 13px;                                           -fx-text-fill: #555555;" text="Workload Status: Not Checked" />
+
+                        </VBox>
+
+                        <!-- TRAINING SCHEDULE -->
+                        <VBox spacing="10" style="-fx-background-color: white;                                      -fx-padding: 18;                                      -fx-background-radius: 10;                                      -fx-border-color: #cbd8ce;                                      -fx-border-radius: 10;">
+
+                            <Label style="-fx-font-size: 17px;                                           -fx-font-weight: bold;                                           -fx-text-fill: #123c2a;" text="Proposed Training Schedule" />
+
+                            <TableView fx:id="scheduleTable" prefHeight="125">
+
+                                <columns>
+
+                                    <TableColumn fx:id="scheduleDayColumn" prefWidth="150" text="Training Day" />
+
+                                    <TableColumn fx:id="scheduleTimeColumn" prefWidth="180" text="Training Time" />
+
+                                    <TableColumn fx:id="scheduleActivityColumn" prefWidth="220" text="Activity" />
+
+                                    <TableColumn fx:id="scheduleVenueColumn" prefWidth="150" text="Venue" />
+
+                                </columns>
+
+                            </TableView>
+
+                            <Label fx:id="scheduleStatusLabel" style="-fx-font-size: 13px;                                           -fx-text-fill: #555555;" text="Schedule Status: Not Checked" />
+
+                        </VBox>
+
+                        <!-- APPROVAL SECTION -->
+                        <VBox spacing="12" style="-fx-background-color: white;                                      -fx-padding: 18;                                      -fx-background-radius: 10;                                      -fx-border-color: #cbd8ce;                                      -fx-border-radius: 10;">
+
+                            <Label style="-fx-font-size: 17px;                                           -fx-font-weight: bold;                                           -fx-text-fill: #123c2a;" text="Program Approval Decision" />
+
+                            <TextArea fx:id="remarksArea" prefHeight="65" promptText="Enter approval or rejection remarks..." wrapText="true" />
+
+                            <HBox alignment="CENTER" spacing="15">
+
+                                <Button onAction="#handleApprove" style="-fx-background-color: #287a46;                                                -fx-text-fill: white;                                                -fx-font-weight: bold;                                                -fx-padding: 11 25;                                                -fx-background-radius: 5;" text="Approve Program" />
+
+                                <Button onAction="#handleReject" style="-fx-background-color: #c0392b;                                                -fx-text-fill: white;                                                -fx-font-weight: bold;                                                -fx-padding: 11 25;                                                -fx-background-radius: 5;" text="Reject Program" />
+
+                                <Button onAction="#handleClear" style="-fx-background-color: #777777;                                                -fx-text-fill: white;                                                -fx-font-weight: bold;                                                -fx-padding: 11 30;                                                -fx-background-radius: 5;" text="Clear" />
+
+                            </HBox>
+
+                            <Label fx:id="statusLabel" style="-fx-font-size: 13px;" text="" wrapText="true" />
+
+                        </VBox>
+
+                    </VBox>
+                </content>
+
+            </ScrollPane>
+        </center>
+
+        <!-- FOOTER -->
+        <bottom>
+            <HBox alignment="CENTER" prefHeight="40" style="-fx-background-color: #123c2a;">
+
+                <Label style="-fx-text-fill: white;                               -fx-font-size: 11px;" text="Bangladesh Military Academy | Cadet Management System" />
+
+            </HBox>
+        </bottom>
+
+    </BorderPane>
+
+</AnchorPane>

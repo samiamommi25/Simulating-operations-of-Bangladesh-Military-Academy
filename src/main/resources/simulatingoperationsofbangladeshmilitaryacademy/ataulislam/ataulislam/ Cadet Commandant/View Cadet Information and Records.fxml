@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="800" prefWidth="1150" style="-fx-background-color: #f4f7f5;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ataulislam.Cadet.ViewCadetInformationController">
+
+    <!-- MAIN CONTENT -->
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;                            -fx-background: #f4f7f5;">
+
+            <VBox spacing="20" style="-fx-padding: 25;">
+
+                <!-- PAGE TITLE -->
+                <VBox spacing="6">
+
+                    <Label style="-fx-font-size: 25px;                                   -fx-font-weight: bold;                                   -fx-text-fill: #123d2b;" text="Cadet Management" />
+
+                    <Label style="-fx-font-size: 13px;                                   -fx-text-fill: #65756b;" text="Search and view complete cadet information and records." />
+
+                </VBox>
+
+                <!-- SEARCH SECTION -->
+                <VBox spacing="16" style="-fx-background-color: white;                              -fx-padding: 22;                              -fx-background-radius: 10;                              -fx-border-color: #dce7df;                              -fx-border-radius: 10;">
+
+                    <Label style="-fx-font-size: 16px;                                   -fx-font-weight: bold;                                   -fx-text-fill: #123d2b;" text="SEARCH CADET INFORMATION" />
+
+                    <GridPane hgap="20" vgap="15">
+
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="50" />
+                            <ColumnConstraints percentWidth="50" />
+                        </columnConstraints>
+
+                        <!-- COMPANY -->
+                        <Label style="-fx-font-weight: bold;" text="Company Name" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+                        <ComboBox fx:id="companyComboBox" maxWidth="Infinity" onAction="#handleCompanyChange" promptText="Select Company" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                        <!-- PLATOON -->
+                        <Label style="-fx-font-weight: bold;" text="Platoon Name" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <ComboBox fx:id="platoonComboBox" maxWidth="Infinity" promptText="Select Platoon" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <!-- CADET ID -->
+                        <Label style="-fx-font-weight: bold;" text="Cadet ID" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+                        <TextField fx:id="cadetIdField" maxWidth="Infinity" promptText="Enter Cadet ID" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+
+                    </GridPane>
+
+                    <!-- SEARCH BUTTONS -->
+                    <HBox alignment="CENTER_RIGHT" spacing="12">
+
+                        <Button onAction="#handleClear" prefWidth="110" style="-fx-background-color: #737d78;                                        -fx-text-fill: white;                                        -fx-font-weight: bold;                                        -fx-padding: 11;" text="Clear" />
+
+                        <Button onAction="#handleSearch" prefWidth="160" style="-fx-background-color: #167346;                                        -fx-text-fill: white;                                        -fx-font-weight: bold;                                        -fx-padding: 11;" text="Search Cadet" />
+
+                    </HBox>
+
+                </VBox>
+
+                <!-- CADET PROFILE -->
+                <VBox spacing="15" style="-fx-background-color: white;                              -fx-padding: 22;                              -fx-background-radius: 10;                              -fx-border-color: #dce7df;                              -fx-border-radius: 10;">
+
+                    <Label style="-fx-font-size: 16px;                                   -fx-font-weight: bold;                                   -fx-text-fill: #123d2b;" text="CADET PERSONAL INFORMATION" />
+
+                    <GridPane hgap="20" vgap="15">
+
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="50" />
+                            <ColumnConstraints percentWidth="50" />
+                        </columnConstraints>
+
+                        <Label style="-fx-font-weight: bold;" text="Cadet ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+                        <Label fx:id="profileIdLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <Label style="-fx-font-weight: bold;" text="Cadet Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                        <Label fx:id="profileNameLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Label style="-fx-font-weight: bold;" text="Company:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+                        <Label fx:id="profileCompanyLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                        <Label style="-fx-font-weight: bold;" text="Platoon:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+                        <Label fx:id="profilePlatoonLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                        <Label style="-fx-font-weight: bold;" text="Age:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+
+                        <Label fx:id="profileAgeLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                        <Label style="-fx-font-weight: bold;" text="Contact:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+
+                        <Label fx:id="profileContactLabel" text="N/A" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+
+                    </GridPane>
+
+                </VBox>
+
+                <!-- CADET RECORDS TABLE -->
+                <VBox spacing="15" style="-fx-background-color: white;                              -fx-padding: 20;                              -fx-background-radius: 10;                              -fx-border-color: #dce7df;                              -fx-border-radius: 10;">
+
+                    <Label style="-fx-font-size: 16px;                                   -fx-font-weight: bold;                                   -fx-text-fill: #123d2b;" text="CADET TRAINING AND ACADEMIC RECORDS" />
+
+                    <TableView fx:id="cadetRecordsTable" prefHeight="300" VBox.vgrow="ALWAYS">
+
+                        <columns>
+
+                            <TableColumn fx:id="serialColumn" prefWidth="45" text="SL" />
+
+                            <TableColumn fx:id="recordIdColumn" prefWidth="100" text="Cadet ID" />
+
+                            <TableColumn fx:id="recordNameColumn" prefWidth="150" text="Cadet Name" />
+
+                            <TableColumn fx:id="recordCompanyColumn" prefWidth="120" text="Company" />
+
+                            <TableColumn fx:id="recordPlatoonColumn" prefWidth="100" text="Platoon" />
+
+                            <TableColumn fx:id="fitnessColumn" prefWidth="105" text="Fitness Score" />
+
+                            <TableColumn fx:id="attendanceColumn" prefWidth="105" text="Attendance" />
+
+                            <TableColumn fx:id="academicColumn" prefWidth="125" text="Academic Result" />
+
+                        </columns>
+
+                        <placeholder>
+                            <Label text="Search a cadet to view personal and academic records." />
+                        </placeholder>
+
+                    </TableView>
+
+                </VBox>
+
+                <!-- MESSAGE -->
+                <Label fx:id="messageLabel" style="-fx-text-fill: #167346;                               -fx-font-size: 13px;" text="Please select company, platoon and enter cadet ID." wrapText="true" />
+
+            </VBox>
+
+        </ScrollPane>
+    </center>
+
+    <!-- FOOTER -->
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-background-color: #123d2b;                      -fx-padding: 12;">
+
+            <Label style="-fx-text-fill: white;                           -fx-font-size: 11px;" text="Bangladesh Military Academy | Cadet Commandant Management System" />
+
+        </HBox>
+    </bottom>
+
+</BorderPane>

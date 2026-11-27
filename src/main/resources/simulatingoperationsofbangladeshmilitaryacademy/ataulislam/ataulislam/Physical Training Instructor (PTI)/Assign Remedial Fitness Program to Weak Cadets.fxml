@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #e8eee9;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ataulislam.Physical.AssignRemedialFitnessProgramtoWeakCadetsContoller">
+    <children>
+        <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+            <!-- Main Content Section -->
+            <center>
+                <HBox spacing="20.0" BorderPane.alignment="CENTER">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                    <children>
+
+                        <!-- Left Panel: Event-1 & Event-2 (Identify & Select Weak Cadets) -->
+                        <VBox prefWidth="430.0" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8, 0, 0, 2);">
+                            <children>
+                                <Label text="1. Low Scorer Cadets (Below Passing Threshold)" textFill="#1b4332">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <children>
+                                        <TextField fx:id="passingThresholdField" prefWidth="150.0" promptText="Passing Score (e.g. 50)" />
+                                        <Button mnemonicParsing="false" onAction="#handleIdentifyLowScorers" style="-fx-background-color: #2d6a4f; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="Identify Low Scorers" />
+                                    </children>
+                                </HBox>
+
+                                <TableView fx:id="weakCadetsTableView" onMouseClicked="#handleSelectWeakCadet" prefHeight="250.0" VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id="cadetIdCol" prefWidth="85.0" text="Cadet ID" />
+                                        <TableColumn fx:id="cadetNameCol" prefWidth="135.0" text="Name" />
+                                        <TableColumn fx:id="pftScoreCol" prefWidth="80.0" text="PFT Score" />
+                                        <TableColumn fx:id="weaknessCol" prefWidth="100.0" text="Weak Area" />
+                                    </columns>
+                                </TableView>
+
+                                <!-- Event-3: Review Fitness Weaknesses -->
+                                <Label text="2. Selected Cadet Fitness Analysis:" textFill="#1b4332">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                </Label>
+                                <TextArea fx:id="fitnessAnalysisTextArea" editable="false" prefHeight="95.0" promptText="Select a cadet from the table above to view detailed weakness analysis..." wrapText="true" />
+                            </children>
+                        </VBox>
+
+                        <!-- Right Panel: Event-4 & Event-5 (Assign Routine & Schedule) -->
+                        <VBox prefWidth="410.0" spacing="12.0" style="-fx-background-color: white; -fx-background-radius: 8; -fx-padding: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8, 0, 0, 2);">
+                            <children>
+                                <Label text="3. Remedial Routine &amp; Training Schedule" textFill="#1b4332">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                                <Separator />
+
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <children>
+                                        <Label prefWidth="130.0" text="Selected Cadet ID:" />
+                                        <TextField fx:id="selectedCadetIdField" editable="false" promptText="Auto-filled on select" HBox.hgrow="ALWAYS" />
+                                    </children>
+                                </HBox>
+
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <children>
+                                        <Label prefWidth="130.0" text="Remedial Routine:" />
+                                        <ComboBox fx:id="remedialRoutineComboBox" prefWidth="230.0" promptText="Select Exercise Routine" HBox.hgrow="ALWAYS" />
+                                    </children>
+                                </HBox>
+
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <children>
+                                        <Label prefWidth="130.0" text="Workload (Hrs/Week):" />
+                                        <TextField fx:id="workloadLimitField" promptText="Max 10 hrs/week" HBox.hgrow="ALWAYS" />
+                                    </children>
+                                </HBox>
+
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <children>
+                                        <Label prefWidth="130.0" text="Start Date:" />
+                                        <DatePicker fx:id="startDatePicker" prefWidth="230.0" promptText="Select Start Date" HBox.hgrow="ALWAYS" />
+                                    </children>
+                                </HBox>
+
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <children>
+                                        <Label prefWidth="130.0" text="Duration (Weeks):" />
+                                        <TextField fx:id="durationWeeksField" promptText="e.g. 4" HBox.hgrow="ALWAYS" />
+                                    </children>
+                                </HBox>
+
+                                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                    <children>
+                                        <Label prefWidth="130.0" text="Frequency (Days/Wk):" />
+                                        <ComboBox fx:id="frequencyComboBox" prefWidth="230.0" promptText="Select Days per Week" HBox.hgrow="ALWAYS" />
+                                    </children>
+                                </HBox>
+
+                                <Region VBox.vgrow="ALWAYS" />
+
+                                <Label fx:id="statusMessageLabel" textFill="#d00000" wrapText="true">
+                                    <font>
+                                        <Font name="System Italic" size="12.0" />
+                                    </font>
+                                </Label>
+
+                                <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                                    <children>
+                                        <Button mnemonicParsing="false" onAction="#handleClearFields" style="-fx-background-color: #adb5bd; -fx-text-fill: black; -fx-cursor: hand;" text="Clear" />
+                                        <Button mnemonicParsing="false" onAction="#handleAssignProgram" style="-fx-background-color: #1b4332; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand;" text="Assign Remedial Program" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+
+                    </children>
+                </HBox>
+            </center>
+
+        </BorderPane>
+    </children>
+</AnchorPane>

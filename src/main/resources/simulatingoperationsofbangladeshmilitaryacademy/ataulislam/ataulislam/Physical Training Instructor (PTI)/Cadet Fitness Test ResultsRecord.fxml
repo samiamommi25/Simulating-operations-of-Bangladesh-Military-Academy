@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ataulislam.PhysicalRecordCadetFitnessTestResultsController"
+            prefWidth="1100" prefHeight="780"
+            style="-fx-background-color: #e8eee9;">
+
+    <!-- HEADER SECTION -->
+    <top>
+        <VBox spacing="8"
+              style="-fx-background-color: #123d2b; -fx-padding: 22;">
+
+            <Label text="BANGLADESH MILITARY ACADEMY"
+                   style="-fx-font-size: 24px;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: white;"/>
+
+            <Label text="CADET PHYSICAL FITNESS TEST RESULT MANAGEMENT"
+                   style="-fx-font-size: 17px;
+                          -fx-font-weight: bold;
+                          -fx-text-fill: #d9e8dc;"/>
+
+            <Label text="Record and evaluate cadet fitness test performance"
+                   style="-fx-font-size: 12px;
+                          -fx-text-fill: white;"/>
+        </VBox>
+    </top>
+
+    <!-- CENTER SECTION -->
+    <center>
+        <ScrollPane fitToWidth="true"
+                    style="-fx-background-color: transparent;
+                           -fx-background: #e8eee9;">
+
+            <content>
+                <VBox spacing="18" padding="25">
+
+                    <!-- PAGE TITLE -->
+                    <Label text="Record Cadet Fitness Test Results"
+                           style="-fx-font-size: 23px;
+                                  -fx-font-weight: bold;
+                                  -fx-text-fill: #123d2b;"/>
+
+                    <Label text="Enter company, platoon, cadet and physical test information."
+                           style="-fx-font-size: 13px;
+                                  -fx-text-fill: #555555;"/>
+
+                    <!-- CADET SELECTION -->
+                    <VBox spacing="15"
+                          style="-fx-background-color: white;
+                                 -fx-padding: 20;
+                                 -fx-background-radius: 10;
+                                 -fx-border-color: #d5ded7;
+                                 -fx-border-radius: 10;">
+
+                        <Label text="1. CADET SELECTION"
+                               style="-fx-font-size: 17px;
+                                      -fx-font-weight: bold;
+                                      -fx-text-fill: #123d2b;"/>
+
+                        <GridPane hgap="20" vgap="15">
+
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="25"/>
+                                <ColumnConstraints percentWidth="25"/>
+                                <ColumnConstraints percentWidth="25"/>
+                                <ColumnConstraints percentWidth="25"/>
+                            </columnConstraints>
+
+                            <Label text="Company:" GridPane.rowIndex="0"
+                                   GridPane.columnIndex="0"/>
+
+                            <ComboBox fx:id="companyComboBox"
+                                      promptText="Select Company"
+                                      maxWidth="Infinity"
+                                      GridPane.rowIndex="1"
+                                      GridPane.columnIndex="0"/>
+
+                            <Label text="Platoon:" GridPane.rowIndex="0"
+                                   GridPane.columnIndex="1"/>
+
+                            <ComboBox fx:id="platoonComboBox"
+                                      promptText="Select Platoon"
+                                      maxWidth="Infinity"
+                                      GridPane.rowIndex="1"
+                                      GridPane.columnIndex="1"/>
+
+                            <Label text="Cadet ID:" GridPane.rowIndex="0"
+                                   GridPane.columnIndex="2"/>
+
+                            <ComboBox fx:id="cadetIdComboBox"
+                                      promptText="Select Cadet ID"
+                                      maxWidth="Infinity"
+                                      GridPane.rowIndex="1"
+                                      GridPane.columnIndex="2"/>
+
+                            <Button text="Load Cadet"
+                                    onAction="#loadCadetInformation"
+                                    prefWidth="120"
+                                    style="-fx-background-color: #245c3e;
+                                           -fx-text-fill: white;
+                                           -fx-font-weight: bold;"
+                                    GridPane.rowIndex="1"
+                                    GridPane.columnIndex="3"/>
+
+                        </GridPane>
+                    </VBox>
+
+                    <!-- CADET INFORMATION -->
+                    <VBox spacing="15"
+                          style="-fx-background-color: white;
+                                 -fx-padding: 20;
+                                 -fx-background-radius: 10;
+                                 -fx-border-color: #d5ded7;
+                                 -fx-border-radius: 10;">
+
+                        <Label text="2. CADET INFORMATION"
+                               style="-fx-font-size: 17px;
+                                      -fx-font-weight: bold;
+                                      -fx-text-fill: #123d2b;"/>
+
+                        <GridPane hgap="25" vgap="15">
+
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="50"/>
+                                <ColumnConstraints percentWidth="50"/>
+                            </columnConstraints>
+
+                            <Label text="Cadet Name:"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="0"/>
+
+                            <Label fx:id="cadetNameLabel"
+                                   text="Not Selected"
+                                   style="-fx-font-weight: bold;
+                                          -fx-text-fill: #245c3e;"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="1"/>
+
+                            <Label text="Cadet ID:"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="0"/>
+
+                            <Label fx:id="selectedCadetIdLabel"
+                                   text="Not Selected"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="1"/>
+
+                            <Label text="Company:"
+                                   GridPane.rowIndex="2"
+                                   GridPane.columnIndex="0"/>
+
+                            <Label fx:id="selectedCompanyLabel"
+                                   text="Not Selected"
+                                   GridPane.rowIndex="2"
+                                   GridPane.columnIndex="1"/>
+
+                            <Label text="Platoon:"
+                                   GridPane.rowIndex="3"
+                                   GridPane.columnIndex="0"/>
+
+                            <Label fx:id="selectedPlatoonLabel"
+                                   text="Not Selected"
+                                   GridPane.rowIndex="3"
+                                   GridPane.columnIndex="1"/>
+
+                        </GridPane>
+                    </VBox>
+
+                    <!-- RUNNING TEST -->
+                    <VBox spacing="15"
+                          style="-fx-background-color: white;
+                                 -fx-padding: 20;
+                                 -fx-background-radius: 10;
+                                 -fx-border-color: #d5ded7;
+                                 -fx-border-radius: 10;">
+
+                        <Label text="3. RUNNING TEST RESULT"
+                               style="-fx-font-size: 17px;
+                                      -fx-font-weight: bold;
+                                      -fx-text-fill: #123d2b;"/>
+
+                        <GridPane hgap="20" vgap="12">
+
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="35"/>
+                                <ColumnConstraints percentWidth="65"/>
+                            </columnConstraints>
+
+                            <Label text="Running Time (Minutes):"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="0"/>
+
+                            <TextField fx:id="runningTimeField"
+                                       promptText="Enter running time"
+                                       GridPane.rowIndex="0"
+                                       GridPane.columnIndex="1"/>
+
+                            <Label text="Distance (Meters):"
+                                   GridPane.rowIndex="1"
+                                   GridPane.columnIndex="0"/>
+
+                            <TextField fx:id="runningDistanceField"
+                                       promptText="Enter running distance"
+                                       GridPane.rowIndex="1"
+                                       GridPane.columnIndex="1"/>
+
+                        </GridPane>
+                    </VBox>
+
+                    <!-- EXERCISE TEST -->
+                    <VBox spacing="15"
+                          style="-fx-background-color: white;
+                                 -fx-padding: 20;
+                                 -fx-background-radius: 10;
+                                 -fx-border-color: #d5ded7;
+                                 -fx-border-radius: 10;">
+
+                        <Label text="4. PUSH-UP AND SIT-UP TEST RESULT"
+                               style="-fx-font-size: 17px;
+                                      -fx-font-weight: bold;
+                                      -fx-text-fill: #123d2b;"/>
+
+                        <GridPane hgap="20" vgap="15">
+
+                            <columnConstraints>
+                                <ColumnConstraints percentWidth="50"/>
+                                <ColumnConstraints percentWidth="50"/>
+                            </columnConstraints>
+
+                            <Label text="Push-up Count:"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="0"/>
+
+                            <Label text="Sit-up Count:"
+                                   GridPane.rowIndex="0"
+                                   GridPane.columnIndex="1"/>
+
+                            <TextField fx:id="pushUpField"
+                                       promptText="Enter push-up count"
+                                       GridPane.rowIndex="1"
+                                       GridPane.columnIndex="0"/>
+
+                            <TextField fx:id="sitUpField"
+                                       promptText="Enter sit-up count"
+                                       GridPane.rowIndex="1"
+                                       GridPane.columnIndex="1"/>
+
+                        </GridPane>
+                    </VBox>
+
+                    <!-- ACTION BUTTONS -->
+                    <HBox spacing="15" alignment="CENTER_RIGHT">
+
+                        <Button text="Clear"
+                                onAction="#clearFields"
+                                prefWidth="120"
+                                prefHeight="40"
+                                style="-fx-background-color: #777777;
+                                       -fx-text-fill: white;
+                                       -fx-font-weight: bold;"/>
+
+                        <Button text="Save Test Results"
+                                onAction="#saveTestResults"
+                                prefWidth="180"
+                                prefHeight="40"
+                                style="-fx-background-color: #123d2b;
+                                       -fx-text-fill: white;
+                                       -fx-font-weight: bold;"/>
+
+                    </HBox>
+
+                    <Label fx:id="statusLabel"
+                           text=""
+                           style="-fx-font-size: 13px;
+                                  -fx-text-fill: #245c3e;"/>
+
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+
+    <!-- FOOTER SECTION -->
+    <bottom>
+        <HBox alignment="CENTER"
+              style="-fx-background-color: #123d2b;
+                     -fx-padding: 12;">
+
+            <Label text="Bangladesh Military Academy | Physical Training Department"
+                   style="-fx-text-fill: white;
+                          -fx-font-size: 12px;"/>
+
+        </HBox>
+    </bottom>
+
+</BorderPane>
