@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="850" prefWidth="1200" style="-fx-background-color: #f4f7f5;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ataulislam.Cadet.ReviewPhysicalFitnessController">
+
+    <!-- MAIN CONTENT -->
+    <center>
+
+        <ScrollPane fitToWidth="true" style="-fx-background: #f4f7f5;                            -fx-background-color: transparent;">
+
+            <VBox spacing="20" style="-fx-padding: 25;">
+
+                <!-- PAGE TITLE -->
+                <VBox spacing="6">
+
+                    <Label style="-fx-font-size: 24px;                                   -fx-font-weight: bold;                                   -fx-text-fill: #123d2b;" text="Review Physical Fitness Test Performance" />
+
+                    <Label style="-fx-font-size: 13px;                                   -fx-text-fill: #65756b;" text="View, analyze and approve cadet physical fitness performance reports." />
+
+                </VBox>
+
+                <!-- FILTER SECTION -->
+                <VBox spacing="16" style="-fx-background-color: white;                              -fx-padding: 22;                              -fx-background-radius: 10;                              -fx-border-color: #dce7df;                              -fx-border-radius: 10;">
+
+                    <Label style="-fx-font-size: 16px;                                   -fx-font-weight: bold;                                   -fx-text-fill: #123d2b;" text="PFT REPORT FILTER" />
+
+                    <GridPane hgap="20" vgap="15">
+
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="50" />
+                            <ColumnConstraints percentWidth="50" />
+                        </columnConstraints>
+
+                        <!-- REPORT TYPE -->
+                        <Label style="-fx-font-weight: bold;" text="Report Type" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+
+                        <ComboBox fx:id="reportTypeComboBox" maxWidth="Infinity" promptText="Select PFT Report" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+
+                        <!-- COMPANY -->
+                        <Label style="-fx-font-weight: bold;" text="Company Name" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <ComboBox fx:id="companyComboBox" maxWidth="Infinity" onAction="#handleCompanyChange" promptText="Select Company" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <!-- PLATOON -->
+                        <Label style="-fx-font-weight: bold;" text="Platoon Name" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+
+                        <ComboBox fx:id="platoonComboBox" maxWidth="Infinity" promptText="Select Platoon" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+
+                        <!-- FROM DATE -->
+                        <Label style="-fx-font-weight: bold;" text="From Date" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                        <DatePicker fx:id="fromDatePicker" maxWidth="Infinity" promptText="Starting Date" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                        <!-- TO DATE -->
+                        <Label style="-fx-font-weight: bold;" text="To Date" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+
+                        <DatePicker fx:id="toDatePicker" maxWidth="Infinity" promptText="Ending Date" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+
+                    </GridPane>
+
+                    <!-- BUTTONS -->
+                    <HBox alignment="CENTER_RIGHT" spacing="12">
+
+                        <Button onAction="#handleClear" prefWidth="110" style="-fx-background-color: #737d78;                                        -fx-text-fill: white;                                        -fx-font-weight: bold;                                        -fx-padding: 11;" text="Clear" />
+
+                        <Button onAction="#handleViewResults" prefWidth="150" style="-fx-background-color: #167346;                                        -fx-text-fill: white;                                        -fx-font-weight: bold;                                        -fx-padding: 11;" text="View Results" />
+
+                    </HBox>
+
+                </VBox>
+
+                <!-- PERFORMANCE SUMMARY -->
+                <VBox spacing="15" style="-fx-background-color: white;                              -fx-padding: 22;                              -fx-background-radius: 10;                              -fx-border-color: #dce7df;                              -fx-border-radius: 10;">
+
+                    <Label style="-fx-font-size: 16px;                                   -fx-font-weight: bold;                                   -fx-text-fill: #123d2b;" text="FITNESS PERFORMANCE SUMMARY" />
+
+                    <GridPane hgap="15" vgap="15">
+
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="33.33" />
+                            <ColumnConstraints percentWidth="33.33" />
+                            <ColumnConstraints percentWidth="33.33" />
+                        </columnConstraints>
+
+                        <!-- AVERAGE -->
+                        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #eaf3ed;                                      -fx-padding: 20;                                      -fx-background-radius: 8;" GridPane.columnIndex="0">
+
+                            <Label style="-fx-font-size: 12px;                                           -fx-font-weight: bold;                                           -fx-text-fill: #123d2b;" text="AVERAGE SCORE" />
+
+                            <Label fx:id="averageScoreLabel" style="-fx-font-size: 27px;                                           -fx-font-weight: bold;                                           -fx-text-fill: #167346;" text="0" />
+
+                        </VBox>
+
+                        <!-- HIGHEST -->
+                        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #eaf3ed;                                      -fx-padding: 20;                                      -fx-background-radius: 8;" GridPane.columnIndex="1">
+
+                            <Label style="-fx-font-size: 12px;                                           -fx-font-weight: bold;                                           -fx-text-fill: #123d2b;" text="HIGHEST SCORE" />
+
+                            <Label fx:id="highestScoreLabel" style="-fx-font-size: 27px;                                           -fx-font-weight: bold;                                           -fx-text-fill: #167346;" text="0" />
+
+                        </VBox>
+
+                        <!-- PASS RATE -->
+                        <VBox alignment="CENTER" spacing="10" style="-fx-background-color: #eaf3ed;                                      -fx-padding: 20;                                      -fx-background-radius: 8;" GridPane.columnIndex="2">
+
+                            <Label style="-fx-font-size: 12px;                                           -fx-font-weight: bold;                                           -fx-text-fill: #123d2b;" text="PASS RATE" />
+
+                            <Label fx:id="passRateLabel" style="-fx-font-size: 27px;                                           -fx-font-weight: bold;                                           -fx-text-fill: #167346;" text="0%" />
+
+                        </VBox>
+                  <rowConstraints>
+                     <RowConstraints />
+                  </rowConstraints>
+
+                    </GridPane>
+
+                </VBox>
+
+                <!-- PFT RESULTS TABLE -->
+                <VBox spacing="15" style="-fx-background-color: white;                              -fx-padding: 20;                              -fx-background-radius: 10;                              -fx-border-color: #dce7df;                              -fx-border-radius: 10;">
+
+                    <Label style="-fx-font-size: 16px;                                   -fx-font-weight: bold;                                   -fx-text-fill: #123d2b;" text="CADET PHYSICAL FITNESS TEST RESULTS" />
+
+                    <TableView fx:id="pftTable" prefHeight="300">
+
+                        <columns>
+
+                            <TableColumn fx:id="serialColumn" prefWidth="50" text="SL" />
+
+                            <TableColumn fx:id="cadetIdColumn" prefWidth="110" text="Cadet ID" />
+
+                            <TableColumn fx:id="cadetNameColumn" prefWidth="160" text="Cadet Name" />
+
+                            <TableColumn fx:id="companyColumn" prefWidth="120" text="Company" />
+
+                            <TableColumn fx:id="platoonColumn" prefWidth="110" text="Platoon" />
+
+                            <TableColumn fx:id="scoreColumn" prefWidth="100" text="PFT Score" />
+
+                            <TableColumn fx:id="dateColumn" prefWidth="110" text="Test Date" />
+
+                            <TableColumn fx:id="statusColumn" prefWidth="110" text="Performance" />
+
+                        </columns>
+
+                        <placeholder>
+                            <Label text="Click View Results to display PFT records." />
+                        </placeholder>
+
+                    </TableView>
+
+                    <!-- APPROVAL SECTION -->
+                    <HBox alignment="CENTER_RIGHT" spacing="15">
+
+                        <Label fx:id="approvalLabel" style="-fx-text-fill: #b7791f;                                       -fx-font-weight: bold;" text="Status: Pending Review" />
+
+                        <Button onAction="#handleApprove" prefWidth="240" style="-fx-background-color: #167346;                                        -fx-text-fill: white;                                        -fx-font-weight: bold;                                        -fx-padding: 12;" text="Approve Performance Summary" />
+
+                    </HBox>
+
+                </VBox>
+
+                <!-- MESSAGE -->
+                <Label fx:id="messageLabel" style="-fx-text-fill: #167346;                               -fx-font-size: 13px;" text="Select report type, company, platoon and evaluation period." wrapText="true" />
+
+            </VBox>
+
+        </ScrollPane>
+
+    </center>
+
+    <!-- FOOTER -->
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-background-color: #123d2b;                      -fx-padding: 13;">
+
+            <Label style="-fx-text-fill: white;                           -fx-font-size: 11px;" text="Bangladesh Military Academy | Physical Fitness Management System" />
+
+        </HBox>
+    </bottom>
+
+</BorderPane>
