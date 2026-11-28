@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.DrillInstructor.Controller.RemedialTrainingController">
+<AnchorPane prefHeight="500.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.DrillInstructor.Controller.RemedialTrainingController">
     <children>
         <Label layoutX="21.0" layoutY="14.0" text="Remedial Drill Training">
             <font>
@@ -32,5 +32,6 @@
         <Label layoutX="340.0" layoutY="360.0" text="Duration (days):" />
         <TextField fx:id="durationTF" layoutX="450.0" layoutY="356.0" prefHeight="26.0" prefWidth="155.0" />
         <Button layoutX="230.0" layoutY="415.0" mnemonicParsing="false" onAction="#assignButtonOnAction" text="Assign Remedial Training" />
+      <Button layoutX="25.0" layoutY="459.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="26.0" prefWidth="126.0" text="Back" />
     </children>
 </AnchorPane>

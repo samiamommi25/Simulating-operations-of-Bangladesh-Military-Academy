@@ -34,5 +34,6 @@
                 <TableColumn fx:id="passRateCol" prefWidth="185.0" text="Pass Rate" />
             </columns>
         </TableView>
+        <Button layoutX="535.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefWidth="70.0" text="Back" />
     </children>
 </AnchorPane>

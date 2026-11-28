@@ -34,11 +34,12 @@
       <ComboBox fx:id="platoonCB" layoutX="364.0" layoutY="136.0" prefWidth="150.0" />
       <DatePicker fx:id="evaluationDateDP" layoutX="123.0" layoutY="194.0" prefHeight="26.0" prefWidth="160.0" />
       <TableView fx:id="evaluationTV" layoutX="8.0" layoutY="309.0" prefHeight="221.0" prefWidth="586.0">
-        <columns>
-          <TableColumn fx:id="idTC" prefWidth="205.6000394821167" text="ID " />
-          <TableColumn fx:id="dateTC" prefWidth="210.3999481201172" text="Date" />
+         <columns>
+            <TableColumn fx:id="idTC" prefWidth="205.6000394821167" text="ID " />
+            <TableColumn fx:id="dateTC" prefWidth="210.3999481201172" text="Date" />
             <TableColumn fx:id="totalTC" prefWidth="169.5999755859375" text="Total" />
-        </columns>
+         </columns>
       </TableView>
+      <Button layoutX="524.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefWidth="70.0" text="Back" />
    </children>
 </AnchorPane>

@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 
 public class CadetPftScoresController
 {
@@ -23,6 +24,8 @@ public class CadetPftScoresController
     private TableColumn termTC;
     @javafx.fxml.FXML
     private TableColumn pushUpTC;
+    @javafx.fxml.FXML
+    private TableView pftTV;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -30,5 +33,9 @@ public class CadetPftScoresController
 
     @javafx.fxml.FXML
     public void loadPFTscoresButtonOAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
     }
 }

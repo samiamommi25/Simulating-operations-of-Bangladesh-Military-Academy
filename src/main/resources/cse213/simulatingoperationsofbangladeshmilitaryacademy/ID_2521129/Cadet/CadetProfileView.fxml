@@ -10,7 +10,7 @@
 
 <AnchorPane prefHeight="470.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.Cadet.Controller.CadetProfileController">
    <children>
-      <TextField fx:id="nameTF" layoutX="208.0" layoutY="69.0" prefHeight="11.0" prefWidth="151.0" />
+      <TextField fx:id="nameTF" editable="false" layoutX="208.0" layoutY="69.0" prefHeight="11.0" prefWidth="151.0" />
       <TextField fx:id="addressTF" layoutX="209.0" layoutY="110.0" />
       <Label layoutX="26.0" layoutY="14.0" text="Cadet Profile &amp; Commissioning Eligibility">
          <font>
@@ -25,6 +25,7 @@
       <Label layoutX="87.0" layoutY="203.0" prefHeight="18.0" prefWidth="114.0" text="Emergency Contact :" />
       <Button layoutX="219.0" layoutY="241.0" mnemonicParsing="false" onAction="#saveContactinfoButtonOnAction" text="Save Contact Info" />
       <Button layoutX="218.0" layoutY="287.0" mnemonicParsing="false" onAction="#checkElligibilliry" prefHeight="26.0" prefWidth="110.0" text="Check Eligibility" />
-      <TextArea fx:id="commissionEligibilityTA" layoutX="146.0" layoutY="328.0" prefHeight="120.0" prefWidth="254.0" promptText="Commissioning Eligibility" />
+      <TextArea fx:id="commissionEligibilityTA" editable="false" layoutX="146.0" layoutY="328.0" prefHeight="120.0" prefWidth="254.0" promptText="Commissioning Eligibility" />
+      <Button layoutX="450.0" layoutY="425.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefWidth="70.0" text="Back" />
    </children>
 </AnchorPane>

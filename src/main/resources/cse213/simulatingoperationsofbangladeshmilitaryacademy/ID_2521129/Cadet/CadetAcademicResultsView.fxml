@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane fx:id="termCB" prefHeight="514.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.Cadet.Controller.CadetAcademicResultsController">
+<AnchorPane prefHeight="514.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.Cadet.Controller.CadetAcademicResultsController">
    <children>
       <Label layoutX="229.0" layoutY="114.0" text="Result Table">
          <font>
@@ -24,19 +24,20 @@
          </font>
       </Label>
       <TableView fx:id="resultTV" layoutX="12.0" layoutY="152.0" prefHeight="200.0" prefWidth="576.0">
-        <columns>
-          <TableColumn fx:id="subjectTC" prefWidth="195.199951171875" text="Subject " />
-          <TableColumn fx:id="markTC" prefWidth="210.40008544921875" text="Mark" />
+         <columns>
+            <TableColumn fx:id="subjectTC" prefWidth="195.199951171875" text="Subject " />
+            <TableColumn fx:id="markTC" prefWidth="210.40008544921875" text="Mark" />
             <TableColumn fx:id="gradeTC" prefWidth="171.20001220703125" text="Grade" />
-        </columns>
+         </columns>
       </TableView>
       <Button layoutX="187.0" layoutY="361.0" mnemonicParsing="false" onAction="#viewResultsButtonOnAction" prefHeight="26.0" prefWidth="210.0" text="View Results" />
       <ComboBox fx:id="ter" layoutX="217.0" layoutY="63.0" prefWidth="150.0" />
       <Label fx:id="cgpaLable" alignment="CENTER" layoutX="148.0" layoutY="459.0" prefHeight="18.0" prefWidth="288.0" text="CGPA" />
-      <Label fx:id="statusLable" layoutX="240.0" layoutY="19.0" prefHeight="26.0" prefWidth="359.0" textFill="#c41b1b">
+      <Label fx:id="statusLable" layoutX="240.0" layoutY="19.0" prefHeight="26.0" prefWidth="359.0" textFill="#bcc4b4">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
+      <Button layoutX="510.0" layoutY="470.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefWidth="70.0" text="Back" />
    </children>
 </AnchorPane>

@@ -33,12 +33,12 @@
       <TextArea fx:id="remarksTA" layoutX="386.0" layoutY="160.0" prefHeight="79.0" prefWidth="200.0" />
       <Label layoutX="329.0" layoutY="182.0" text="Remarks:" />
       <TableView fx:id="assesmentTV" layoutX="11.0" layoutY="277.0" prefHeight="200.0" prefWidth="589.0">
-        <columns>
-          <TableColumn fx:id="cadeIdTC" prefWidth="143.20001220703125" text="Cadet ID" />
-          <TableColumn fx:id="exerciseTC" prefWidth="128.79998779296875" text="Exercise " />
+         <columns>
+            <TableColumn fx:id="cadeIdTC" prefWidth="143.20001220703125" text="Cadet ID" />
+            <TableColumn fx:id="exerciseTC" prefWidth="128.79998779296875" text="Exercise " />
             <TableColumn fx:id="dateTC" prefWidth="156.79998779296875" text="Date" />
             <TableColumn fx:id="scoreTC" prefWidth="160.7999267578125" text="Score" />
-        </columns>
+         </columns>
       </TableView>
       <Button layoutX="241.0" layoutY="239.0" mnemonicParsing="false" onAction="#calculateButtonOn" text="Calculate &amp; Submit" />
       <Label layoutX="28.0" prefHeight="18.0" prefWidth="339.0" text="Conduct Field Exercise">
@@ -46,5 +46,6 @@
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
+      <Button layoutX="520.0" layoutY="6.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefWidth="70.0" text="Back" />
    </children>
 </AnchorPane>

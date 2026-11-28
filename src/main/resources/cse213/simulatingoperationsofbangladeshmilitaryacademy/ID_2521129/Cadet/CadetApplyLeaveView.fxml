@@ -41,5 +41,6 @@
       <ComboBox fx:id="leaveTypeCB" layoutX="124.0" layoutY="66.0" prefWidth="150.0" />
       <TextArea fx:id="reasonTA" layoutX="392.0" layoutY="57.0" prefHeight="153.0" prefWidth="183.0" />
       <Button layoutX="163.0" layoutY="272.0" mnemonicParsing="false" onAction="#submitAppicationButtonOnAction" prefHeight="26.0" prefWidth="291.0" text="Submit Application" />
+      <Button layoutX="510.0" layoutY="390.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefWidth="70.0" text="Back" />
    </children>
 </AnchorPane>

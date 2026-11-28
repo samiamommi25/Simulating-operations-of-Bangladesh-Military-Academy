@@ -29,4 +29,8 @@ public class PlatoonReportController
     @javafx.fxml.FXML
     public void generateButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+    }
 }

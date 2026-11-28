@@ -36,4 +36,8 @@ public class TrainingIndexController
     @javafx.fxml.FXML
     public void publishButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+    }
 }

@@ -28,4 +28,8 @@ public class CadetProfileController
     @javafx.fxml.FXML
     public void checkElligibilliry(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+    }
 }

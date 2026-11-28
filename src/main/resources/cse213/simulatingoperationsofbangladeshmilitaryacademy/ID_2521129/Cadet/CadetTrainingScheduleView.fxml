@@ -33,15 +33,16 @@
          </font>
       </Label>
       <TableView fx:id="ScheduleTV" layoutX="14.0" layoutY="314.0" prefHeight="200.0" prefWidth="570.0">
-        <columns>
-          <TableColumn fx:id="InstructorTC" minWidth="1.60009765625" prefWidth="112.0" text="Instructor" />
+         <columns>
+            <TableColumn fx:id="InstructorTC" minWidth="1.60009765625" prefWidth="112.0" text="Instructor" />
             <TableColumn fx:id="TimeTC" minWidth="1.60009765625" prefWidth="156.79998779296875" text="Time" />
             <TableColumn fx:id="activityTypeTC" minWidth="1.60009765625" prefWidth="139.20001220703125" text="Activity Type" />
             <TableColumn fx:id="locationTC" minWidth="1.60009765625" prefWidth="163.199951171875" text="Location" />
-        </columns>
+         </columns>
       </TableView>
       <Button layoutX="149.0" layoutY="525.0" mnemonicParsing="false" onAction="#loadTableButtonOnAction" prefHeight="26.0" prefWidth="282.0" text="Load Table" />
       <DatePicker fx:id="datedp" layoutX="212.0" layoutY="108.0" />
-      <TextArea fx:id="activityDetailsTA" layoutX="179.0" layoutY="165.0" prefHeight="79.0" prefWidth="298.0" />
+      <TextArea fx:id="activityDetailsTA" editable="false" layoutX="179.0" layoutY="165.0" prefHeight="79.0" prefWidth="298.0" />
+      <Button layoutX="510.0" layoutY="565.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefWidth="70.0" text="Back" />
    </children>
 </AnchorPane>

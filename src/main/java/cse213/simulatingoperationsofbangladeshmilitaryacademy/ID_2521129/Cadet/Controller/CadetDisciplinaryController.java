@@ -29,4 +29,8 @@ public class CadetDisciplinaryController
     @javafx.fxml.FXML
     public void submitAppealButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+    }
 }

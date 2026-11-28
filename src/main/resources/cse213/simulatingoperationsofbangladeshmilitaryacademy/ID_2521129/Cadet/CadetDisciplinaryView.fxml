@@ -10,29 +10,30 @@
 
 
 <AnchorPane prefHeight="615.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.Cadet.Controller.CadetDisciplinaryController">
-   <children>
-      <Label layoutX="14.0" layoutY="14.0" text="Disciplinary Records &amp; Warning Appeal">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="14.0" layoutY="360.0" text="Record Details:" />
-      <Label contentDisplay="CENTER" layoutX="315.0" layoutY="96.0" prefHeight="18.0" prefWidth="340.0" text="Disciplinary Records">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </Label>
-      <TableView fx:id="disciplinaryRecordsTV" layoutX="129.0" layoutY="138.0" prefHeight="200.0" prefWidth="566.0">
-        <columns>
-          <TableColumn fx:id="dateTC" prefWidth="143.99996662139893" text="Date" />
-          <TableColumn fx:id="offenseTC" prefWidth="161.60000610351562" text="Offense" />
-            <TableColumn fx:id="penaltyTC" prefWidth="130.39999389648438" text="Penalty" />
-            <TableColumn fx:id="statusTC" prefWidth="134.39999389648438" text="Status" />
-        </columns>
-      </TableView>
-      <TextArea fx:id="recordDetailTA" editable="false" layoutX="107.0" layoutY="360.0" prefHeight="110.0" prefWidth="268.0" />
-      <TextArea fx:id="appealJustificationTA" layoutX="494.0" layoutY="360.0" prefHeight="110.0" prefWidth="226.0" />
-      <Label layoutX="379.0" layoutY="369.0" text="Appeal Justification:" />
-      <Button layoutX="329.0" layoutY="507.0" mnemonicParsing="false" onAction="#submitAppealButtonOnAction" prefHeight="26.0" prefWidth="166.0" text="Submit Appeal" />
-   </children>
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" text="Disciplinary Records &amp; Warning Appeal">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="360.0" text="Record Details:" />
+        <Label contentDisplay="CENTER" layoutX="315.0" layoutY="96.0" prefHeight="18.0" prefWidth="340.0" text="Disciplinary Records">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font>
+        </Label>
+        <TableView fx:id="disciplinaryRecordsTV" layoutX="129.0" layoutY="138.0" prefHeight="200.0" prefWidth="566.0">
+            <columns>
+                <TableColumn fx:id="dateTC" prefWidth="143.99996662139893" text="Date" />
+                <TableColumn fx:id="offenseTC" prefWidth="161.60000610351562" text="Offense" />
+                <TableColumn fx:id="penaltyTC" prefWidth="130.39999389648438" text="Penalty" />
+                <TableColumn fx:id="statusTC" prefWidth="134.39999389648438" text="Status" />
+            </columns>
+        </TableView>
+        <TextArea fx:id="recordDetailTA" editable="false" layoutX="107.0" layoutY="360.0" prefHeight="110.0" prefWidth="268.0" />
+        <TextArea fx:id="appealJustificationTA" layoutX="494.0" layoutY="360.0" prefHeight="110.0" prefWidth="226.0" />
+        <Label layoutX="379.0" layoutY="369.0" text="Appeal Justification:" />
+        <Button layoutX="329.0" layoutY="507.0" mnemonicParsing="false" onAction="#submitAppealButtonOnAction" prefHeight="26.0" prefWidth="166.0" text="Submit Appeal" />
+        <Button layoutX="720.0" layoutY="570.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefWidth="70.0" text="Back" />
+    </children>
 </AnchorPane>

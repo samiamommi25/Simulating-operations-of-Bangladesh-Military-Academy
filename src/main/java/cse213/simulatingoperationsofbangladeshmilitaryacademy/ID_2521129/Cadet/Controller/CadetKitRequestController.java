@@ -10,6 +10,8 @@ public class CadetKitRequestController
     private ComboBox uniformItemsCB;
     @javafx.fxml.FXML
     private TextField quantityTF;
+    @javafx.fxml.FXML
+    private Button submitRequestButton;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -17,5 +19,9 @@ public class CadetKitRequestController
 
     @javafx.fxml.FXML
     public void submitRequestButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
     }
 }

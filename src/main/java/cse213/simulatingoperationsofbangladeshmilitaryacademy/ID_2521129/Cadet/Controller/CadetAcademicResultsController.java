@@ -24,8 +24,6 @@ public class CadetAcademicResultsController
     @javafx.fxml.FXML
     private Label statusLable;
     @javafx.fxml.FXML
-    private AnchorPane termCB;
-    @javafx.fxml.FXML
     private Label cgpaLable;
 
     @javafx.fxml.FXML
@@ -34,5 +32,9 @@ public class CadetAcademicResultsController
 
     @javafx.fxml.FXML
     public void viewResultsButtonOnAction(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
     }
 }

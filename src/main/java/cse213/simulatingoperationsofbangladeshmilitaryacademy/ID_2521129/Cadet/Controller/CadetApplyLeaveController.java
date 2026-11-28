@@ -23,4 +23,8 @@ public class CadetApplyLeaveController
     @javafx.fxml.FXML
     public void submitAppicationButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+    }
 }

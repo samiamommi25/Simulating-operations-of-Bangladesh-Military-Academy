@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="448.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.Cadet.Controller.CadetDashboardController">
+   <children>
+      <Button layoutX="371.0" layoutY="102.0" mnemonicParsing="false" onAction="#cadetDisciplinaryButtonOnAction" prefHeight="26.0" prefWidth="174.0" text="Cadet Disciplinary" />
+      <Button layoutX="83.0" layoutY="154.0" mnemonicParsing="false" onAction="#kitRequestButtonOnAction" prefHeight="26.0" prefWidth="174.0" text="Kit Request" />
+      <Button layoutX="371.0" layoutY="154.0" mnemonicParsing="false" onAction="#cadetMedicalButtonOnAction" prefHeight="26.0" prefWidth="174.0" text="Cadet Medical" />
+      <Button layoutX="371.0" layoutY="197.0" mnemonicParsing="false" onAction="#pftScoresButtonOnAction" prefHeight="26.0" prefWidth="174.0" text="Pft Scores" />
+      <Button layoutX="371.0" layoutY="244.0" mnemonicParsing="false" onAction="#cadetProfileButtonOnAction" prefHeight="26.0" prefWidth="174.0" text="Cadet Profile" />
+      <Button layoutX="83.0" layoutY="197.0" mnemonicParsing="false" onAction="#trainingButtonOnAction" prefHeight="26.0" prefWidth="174.0" text="Training Schedule" />
+      <Button layoutX="81.0" layoutY="101.0" mnemonicParsing="false" onAction="#applyLeaveButtonOnAction" prefHeight="26.0" prefWidth="174.0" text="Apply Leave" />
+      <Button layoutX="-90.0" layoutY="-70.0" mnemonicParsing="false" text="Button" />
+      <Button layoutX="83.0" layoutY="244.0" mnemonicParsing="false" onAction="#academicResultButtonOnAction" prefHeight="26.0" prefWidth="174.0" text="Academic Result" />
+      <Label layoutX="28.0" layoutY="14.0" text="Cadet Dashboard">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="welcomLable" layoutX="48.0" layoutY="57.0" text="Welcome Back" />
+      <Button layoutX="223.0" layoutY="316.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" prefHeight="26.0" prefWidth="174.0" text="Log out" />
+   </children>
+</AnchorPane>

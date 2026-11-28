@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="459.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.DrillInstructor.Controller.RangeQualificationController">
+<AnchorPane prefHeight="495.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.DrillInstructor.Controller.RangeQualificationController">
    <children>
       <Label layoutX="77.0" layoutY="55.0" text="Cadet ID:" />
       <Label layoutX="69.0" layoutY="93.0" text="Platoon:" />
@@ -36,5 +35,6 @@
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
+      <Button layoutX="10.0" layoutY="454.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="26.0" prefWidth="96.0" text="Back" />
    </children>
 </AnchorPane>

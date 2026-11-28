@@ -21,4 +21,8 @@ public class CadetMedicalController
     @javafx.fxml.FXML
     public void submitSickReportButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+    }
 }

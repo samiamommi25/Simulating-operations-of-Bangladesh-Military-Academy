@@ -35,4 +35,8 @@ public class DrillEvaluationController
     @javafx.fxml.FXML
     public void calculateandSubmitButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+    }
 }

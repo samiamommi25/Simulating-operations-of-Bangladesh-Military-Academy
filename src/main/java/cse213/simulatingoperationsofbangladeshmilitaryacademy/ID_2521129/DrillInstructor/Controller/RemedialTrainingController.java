@@ -34,4 +34,8 @@ public class RemedialTrainingController
     @javafx.fxml.FXML
     public void identifyButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+    }
 }

@@ -10,29 +10,30 @@
 
 
 <AnchorPane prefHeight="467.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.Cadet.Controller.CadetPftScoresController">
-   <children>
-      <Label layoutX="14.0" layoutY="14.0" text="Physical Fitness Test (PFT) Scores">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="93.0" layoutY="109.0" text="Assessment Period:">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <ComboBox fx:id="assesmentPeriodCB" layoutX="226.0" layoutY="106.0" prefWidth="150.0" />
-      <Button layoutX="151.0" layoutY="381.0" mnemonicParsing="false" onAction="#loadPFTscoresButtonOAction" prefHeight="26.0" prefWidth="297.0" text="Load PFT Scores" />
-      <Label fx:id="summaryLable" layoutX="22.0" layoutY="431.0" prefHeight="18.0" prefWidth="298.0" />
-      <TableView layoutX="8.0" layoutY="168.0" prefHeight="200.0" prefWidth="587.0">
-        <columns>
-          <TableColumn fx:id="termTC" prefWidth="105.60003662109375" text="Term" />
-          <TableColumn fx:id="pushUpTC" prefWidth="116.7999267578125" text="Push-ups" />
-            <TableColumn fx:id="sitUpsTC" prefWidth="117.60003662109375" text="Sit-ups " />
-            <TableColumn fx:id="runTC" prefWidth="133.5999755859375" text="2.4km Run" />
-            <TableColumn fx:id="statusTC" prefWidth="112.800048828125" text="Status" />
-        </columns>
-      </TableView>
-      <Label fx:id="statusLable" layoutX="397.0" layoutY="23.0" prefHeight="18.0" prefWidth="194.0" textFill="#df0707" />
-   </children>
+    <children>
+        <Label layoutX="14.0" layoutY="14.0" text="Physical Fitness Test (PFT) Scores">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="93.0" layoutY="109.0" text="Assessment Period:">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="assesmentPeriodCB" layoutX="226.0" layoutY="106.0" prefWidth="150.0" />
+        <Button layoutX="151.0" layoutY="381.0" mnemonicParsing="false" onAction="#loadPFTscoresButtonOAction" prefHeight="26.0" prefWidth="297.0" text="Load PFT Scores" />
+        <Label fx:id="summaryLable" layoutX="22.0" layoutY="431.0" prefHeight="18.0" prefWidth="298.0" />
+        <TableView fx:id="pftTV" layoutX="8.0" layoutY="168.0" prefHeight="200.0" prefWidth="587.0">
+            <columns>
+                <TableColumn fx:id="termTC" prefWidth="105.60003662109375" text="Term" />
+                <TableColumn fx:id="pushUpTC" prefWidth="116.7999267578125" text="Push-ups" />
+                <TableColumn fx:id="sitUpsTC" prefWidth="117.60003662109375" text="Sit-ups " />
+                <TableColumn fx:id="runTC" prefWidth="133.5999755859375" text="2.4km Run" />
+                <TableColumn fx:id="statusTC" prefWidth="112.800048828125" text="Status" />
+            </columns>
+        </TableView>
+        <Label fx:id="statusLable" layoutX="397.0" layoutY="23.0" prefHeight="18.0" prefWidth="194.0" textFill="#df0707" />
+        <Button layoutX="510.0" layoutY="425.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefWidth="70.0" text="Back" />
+    </children>
 </AnchorPane>

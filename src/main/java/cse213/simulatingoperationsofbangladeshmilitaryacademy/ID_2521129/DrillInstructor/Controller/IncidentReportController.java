@@ -31,4 +31,8 @@ public class IncidentReportController
     @javafx.fxml.FXML
     public void submitButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+    }
 }

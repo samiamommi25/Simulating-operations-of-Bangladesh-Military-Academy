@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.DrillInstructor.Controller.TrainingIndexController">
+<AnchorPane prefHeight="500.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.DrillInstructor.Controller.TrainingIndexController">
     <children>
         <Label layoutX="21.0" layoutY="14.0" text="Military Training Index">
             <font>
@@ -16,7 +16,7 @@
             </font>
         </Label>
         <Label layoutX="40.0" layoutY="70.0" text="Term:" />
-        <ComboBox fx:id="termCB" layoutX="150.0" layoutY="66.0" prefWidth="160.0" />
+        <ComboBox fx:id="termCB" layoutX="99.0" layoutY="66.0" prefWidth="160.0" />
         <Button layoutX="340.0" layoutY="66.0" mnemonicParsing="false" onAction="#compileButtonOnAction" text="Compile Term Index" />
         <Label layoutX="40.0" layoutY="115.0" text="Index Per Platoon:" />
         <TableView fx:id="indexTV" layoutX="40.0" layoutY="140.0" prefHeight="210.0" prefWidth="565.0">
@@ -31,5 +31,6 @@
         <Label layoutX="40.0" layoutY="375.0" text="Overall Index:" />
         <Label fx:id="overallLabel" layoutX="150.0" layoutY="375.0" text="-" />
         <Button layoutX="195.0" layoutY="425.0" mnemonicParsing="false" onAction="#publishButtonOnAction" text="Publish Index to Commandant" />
+      <Button layoutX="26.0" layoutY="451.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="26.0" prefWidth="107.0" text="Back" />
     </children>
 </AnchorPane>

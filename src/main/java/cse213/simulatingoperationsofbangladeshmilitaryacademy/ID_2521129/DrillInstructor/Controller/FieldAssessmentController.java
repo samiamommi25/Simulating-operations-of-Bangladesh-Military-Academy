@@ -41,4 +41,8 @@ public class FieldAssessmentController
     @javafx.fxml.FXML
     public void calculateButtonOn(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+    }
 }

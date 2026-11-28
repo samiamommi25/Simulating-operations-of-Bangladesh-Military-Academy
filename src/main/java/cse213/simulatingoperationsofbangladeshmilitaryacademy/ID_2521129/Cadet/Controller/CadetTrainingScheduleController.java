@@ -30,4 +30,8 @@ public class CadetTrainingScheduleController
     @javafx.fxml.FXML
     public void loadTableButtonOnAction(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+    }
 }

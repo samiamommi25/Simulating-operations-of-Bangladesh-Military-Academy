@@ -31,4 +31,8 @@ public class RangeQualificationController
     @javafx.fxml.FXML
     public void submitQualificationButtonOn(ActionEvent actionEvent) {
     }
+
+    @javafx.fxml.FXML
+    public void backButtonOnAction(ActionEvent actionEvent) {
+    }
 }

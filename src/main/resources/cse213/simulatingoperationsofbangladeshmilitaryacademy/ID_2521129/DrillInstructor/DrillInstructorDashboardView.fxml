@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="480.0" prefWidth="560.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.DrillInstructor.Controller.DrillInstructorDashboardController">
+    <children>
+        <Label layoutX="21.0" layoutY="14.0" text="Drill Instructor Dashboard">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label fx:id="welcomeLabel" layoutX="21.0" layoutY="55.0" text="Welcome" />
+        <Button layoutX="60.0" layoutY="110.0" mnemonicParsing="false" onAction="#drillEvaluationButtonOnAction" prefWidth="200.0" text="Drill Evaluation" />
+        <Button layoutX="300.0" layoutY="110.0" mnemonicParsing="false" onAction="#rangeButtonOnAction" prefWidth="200.0" text="Range Qualification" />
+        <Button layoutX="60.0" layoutY="170.0" mnemonicParsing="false" onAction="#fieldButtonOnAction" prefWidth="200.0" text="Field Assessment" />
+        <Button layoutX="300.0" layoutY="170.0" mnemonicParsing="false" onAction="#scheduleButtonOnAction" prefWidth="200.0" text="Schedule Session" />
+        <Button layoutX="60.0" layoutY="230.0" mnemonicParsing="false" onAction="#remedialButtonOnAction" prefWidth="200.0" text="Remedial Training" />
+        <Button layoutX="300.0" layoutY="230.0" mnemonicParsing="false" onAction="#incidentButtonOnAction" prefWidth="200.0" text="Report Incident" />
+        <Button layoutX="60.0" layoutY="290.0" mnemonicParsing="false" onAction="#platoonReportButtonOnAction" prefWidth="200.0" text="Platoon Report" />
+        <Button layoutX="300.0" layoutY="290.0" mnemonicParsing="false" onAction="#trainingIndexButtonOnAction" prefWidth="200.0" text="Training Index" />
+        <Button layoutX="210.0" layoutY="380.0" mnemonicParsing="false" onAction="#logoutButtonOnAction" prefWidth="140.0" text="Logout" />
+    </children>
+</AnchorPane>
