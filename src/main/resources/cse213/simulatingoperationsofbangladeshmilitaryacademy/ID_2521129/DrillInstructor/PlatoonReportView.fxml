@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="540.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.DrillInstructor.Controller.PlatoonReportController">
+    <children>
+        <Label layoutX="21.0" layoutY="14.0" text="Platoon Performance Report">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="40.0" layoutY="70.0" text="Platoon:" />
+        <ComboBox fx:id="platoonCB" layoutX="150.0" layoutY="66.0" prefWidth="160.0" />
+        <Label layoutX="40.0" layoutY="115.0" text="From Date:" />
+        <DatePicker fx:id="fromDP" layoutX="150.0" layoutY="111.0" prefWidth="160.0" />
+        <Label layoutX="340.0" layoutY="115.0" text="To Date:" />
+        <DatePicker fx:id="toDP" layoutX="445.0" layoutY="111.0" prefWidth="160.0" />
+        <Button layoutX="225.0" layoutY="160.0" mnemonicParsing="false" onAction="#generateButtonOnAction" text="Generate Performance Report" />
+        <Label layoutX="40.0" layoutY="210.0" text="Report Summary:" />
+        <TextArea fx:id="reportTA" editable="false" layoutX="40.0" layoutY="235.0" prefHeight="100.0" prefWidth="565.0" wrapText="true" />
+        <Label layoutX="40.0" layoutY="355.0" text="Platoon Records:" />
+        <TableView fx:id="reportTV" layoutX="40.0" layoutY="380.0" prefHeight="130.0" prefWidth="565.0">
+            <columns>
+                <TableColumn fx:id="categoryCol" prefWidth="200.0" text="Category" />
+                <TableColumn fx:id="avgScoreCol" prefWidth="180.0" text="Average Score" />
+                <TableColumn fx:id="passRateCol" prefWidth="185.0" text="Pass Rate" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

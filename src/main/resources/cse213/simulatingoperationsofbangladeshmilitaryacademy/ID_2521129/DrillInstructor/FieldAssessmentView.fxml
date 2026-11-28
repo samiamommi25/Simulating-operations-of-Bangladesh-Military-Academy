@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="485.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.DrillInstructor.Controller.FieldAssessmentController">
+   <children>
+      <Label layoutX="53.0" layoutY="44.0" text="Cadet ID:" />
+      <TextField fx:id="cadetIdTF" layoutX="123.0" layoutY="40.0" />
+      <Label layoutX="11.0" layoutY="82.0" text="Navigation Accuracy:" />
+      <TextField fx:id="navigationaccuracyTF" layoutX="123.0" layoutY="78.0" />
+      <Label layoutX="53.0" layoutY="119.0" text="Teamwork:" />
+      <TextField fx:id="teamworkTF" layoutX="123.0" layoutY="115.0" />
+      <Label layoutX="19.0" layoutY="158.0" text=" Decision-making:" />
+      <TextField fx:id="decisionMakingTF" layoutX="123.0" layoutY="154.0" />
+      <Label layoutX="20.0" layoutY="191.0" text="Completion Time:" />
+      <TextField fx:id="completionTimeTF" layoutX="123.0" layoutY="187.0" />
+      <Label layoutX="329.0" layoutY="44.0" text="Platoon:" />
+      <ComboBox fx:id="platoonCB" layoutX="391.0" layoutY="40.0" prefWidth="150.0" />
+      <Label layoutX="306.0" layoutY="82.0" text="Exercise Type:" />
+      <ComboBox fx:id="exerciseTypeCB" layoutX="391.0" layoutY="78.0" prefWidth="150.0" />
+      <Label layoutX="329.0" layoutY="132.0" text="Date:" />
+      <DatePicker fx:id="dateDP" layoutX="391.0" layoutY="127.0" prefHeight="26.0" prefWidth="159.0" />
+      <TextArea fx:id="remarksTA" layoutX="386.0" layoutY="160.0" prefHeight="79.0" prefWidth="200.0" />
+      <Label layoutX="329.0" layoutY="182.0" text="Remarks:" />
+      <TableView fx:id="assesmentTV" layoutX="11.0" layoutY="277.0" prefHeight="200.0" prefWidth="589.0">
+        <columns>
+          <TableColumn fx:id="cadeIdTC" prefWidth="143.20001220703125" text="Cadet ID" />
+          <TableColumn fx:id="exerciseTC" prefWidth="128.79998779296875" text="Exercise " />
+            <TableColumn fx:id="dateTC" prefWidth="156.79998779296875" text="Date" />
+            <TableColumn fx:id="scoreTC" prefWidth="160.7999267578125" text="Score" />
+        </columns>
+      </TableView>
+      <Button layoutX="241.0" layoutY="239.0" mnemonicParsing="false" onAction="#calculateButtonOn" text="Calculate &amp; Submit" />
+      <Label layoutX="28.0" prefHeight="18.0" prefWidth="339.0" text="Conduct Field Exercise">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

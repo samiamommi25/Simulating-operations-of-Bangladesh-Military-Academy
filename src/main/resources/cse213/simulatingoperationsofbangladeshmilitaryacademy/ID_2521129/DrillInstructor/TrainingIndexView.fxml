@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.DrillInstructor.Controller.TrainingIndexController">
+    <children>
+        <Label layoutX="21.0" layoutY="14.0" text="Military Training Index">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="40.0" layoutY="70.0" text="Term:" />
+        <ComboBox fx:id="termCB" layoutX="150.0" layoutY="66.0" prefWidth="160.0" />
+        <Button layoutX="340.0" layoutY="66.0" mnemonicParsing="false" onAction="#compileButtonOnAction" text="Compile Term Index" />
+        <Label layoutX="40.0" layoutY="115.0" text="Index Per Platoon:" />
+        <TableView fx:id="indexTV" layoutX="40.0" layoutY="140.0" prefHeight="210.0" prefWidth="565.0">
+            <columns>
+                <TableColumn fx:id="platoonCol" prefWidth="130.0" text="Platoon" />
+                <TableColumn fx:id="drillCol" prefWidth="110.0" text="Drill" />
+                <TableColumn fx:id="rangeCol" prefWidth="110.0" text="Range" />
+                <TableColumn fx:id="fieldCol" prefWidth="110.0" text="Field" />
+                <TableColumn fx:id="indexCol" prefWidth="105.0" text="Index" />
+            </columns>
+        </TableView>
+        <Label layoutX="40.0" layoutY="375.0" text="Overall Index:" />
+        <Label fx:id="overallLabel" layoutX="150.0" layoutY="375.0" text="-" />
+        <Button layoutX="195.0" layoutY="425.0" mnemonicParsing="false" onAction="#publishButtonOnAction" text="Publish Index to Commandant" />
+    </children>
+</AnchorPane>

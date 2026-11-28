@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.simulatingoperationsofbangladeshmilitaryacademy.ID_2521129.DrillInstructor.Controller.RemedialTrainingController">
+    <children>
+        <Label layoutX="21.0" layoutY="14.0" text="Remedial Drill Training">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="40.0" layoutY="70.0" text="Platoon:" />
+        <ComboBox fx:id="platoonCB" layoutX="150.0" layoutY="66.0" prefWidth="160.0" />
+        <Button layoutX="340.0" layoutY="66.0" mnemonicParsing="false" onAction="#identifyButtonOnAction" text="Identify Low Performers" />
+        <Label layoutX="40.0" layoutY="115.0" text="Low Performers:" />
+        <TableView fx:id="lowPerformerTV" layoutX="40.0" layoutY="140.0" prefHeight="190.0" prefWidth="565.0">
+            <columns>
+                <TableColumn fx:id="cadetIdCol" prefWidth="150.0" text="Cadet ID" />
+                <TableColumn fx:id="nameCol" prefWidth="215.0" text="Name" />
+                <TableColumn fx:id="avgScoreCol" prefWidth="200.0" text="Average Score" />
+            </columns>
+        </TableView>
+        <Label layoutX="40.0" layoutY="360.0" text="Remedial Routine:" />
+        <ComboBox fx:id="routineCB" layoutX="165.0" layoutY="356.0" prefWidth="145.0" />
+        <Label layoutX="340.0" layoutY="360.0" text="Duration (days):" />
+        <TextField fx:id="durationTF" layoutX="450.0" layoutY="356.0" prefHeight="26.0" prefWidth="155.0" />
+        <Button layoutX="230.0" layoutY="415.0" mnemonicParsing="false" onAction="#assignButtonOnAction" text="Assign Remedial Training" />
+    </children>
+</AnchorPane>
